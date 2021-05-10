@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="master.css">
+  </head>
+  <body>
+    <div id="root">
+      <table>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>room_number</th>
+          </tr>
+        </thead>
+          <tr v-for="stanza in query">
+            <td @click= "click_id(stanza.id)">{{stanza.id}}</td>
+            <td >{{stanza.room_number}}</td>
+          </tr>
+      </table>
+
+
+      <div class="" >
+        <table v-if="(flag)">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>room_number</th>
+              <th>floor</th>
+              <th>beds</th>
+              <th>created_at</th>
+              <th>updated_at</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>{{stanza_info.id}}</td>
+            <td >{{stanza_info.room_number}}</td>
+            <td>{{stanza_info.floor}}</td>
+            <td>{{stanza_info.beds}}</td>
+            <td>{{stanza_info.created_at}}</td>
+            <td>{{stanza_info.updated_at}}</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+   <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
